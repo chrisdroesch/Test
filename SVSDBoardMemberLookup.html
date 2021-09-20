@@ -662,6 +662,9 @@ function findRep(district) {
       case "WEST 6":
         message = "Your Region is West 6. Vote for Fred Peterson November 2, 2021!";
         break;
+      case "region-6":
+        message = "Mike Jacobs is your representative - Term expires 2021. No Challenger.";
+        break;
       default:
         message = "Sorry. We were not able to identify your school board candidate.";
         alert (district);
@@ -671,7 +674,8 @@ function findRep(district) {
   
   function votingDistrict(district)
   {
-    if district == "cranberry" { document.getElementById("question2").display = "block"; }
+    alert(district);
+    if district == "cranberry" { document.getElementById("question2").style.display = "block"; }
     else { findRep(district); }
   }
   
