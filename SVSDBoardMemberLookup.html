@@ -14,9 +14,15 @@
   <input name="streetname" oninput='onInput()' id="streetname" list="streets-list">
 </form>
 <datalist id="streets-list">
+  <option title="West2">Aberdeen Dr</option>
+  <option title="West2">Acer Ct</option>
+  <option title="West1">Adams Dr</option>
   <option title="East1">Adare Ct</option>
+  <option title="West1">Alex Ct</option>
   <option title="West4">Alleyne Dr</option>
+  <option title="West3">Amarth Ln</option>
   <option title="West6">Amber View Ct</option>
+  <option title="West3">Amon St</option>
   <option title="West5">Anna Marie Dr</option>
 </datalist>
   
@@ -26,13 +32,25 @@
 function findRep(district) {
     switch(district) {
       case "East1":
-        message = "Your Region is East 1. Vote for Leslie Bredl November 2, 2021";
+        message = "Your Region is East 1. Vote for Leslie Bredl November 2, 2021!";
+        break;
+      case "West1":
+        message = "Your Region is West 1. Jim Nickel is your representative. Term Expires 2023.";
+        break;
+       case "West2":
+        message = "Your Region is West 2. Jim Nickel is your representative. Term Expires 2023.";
+        break;
+      case "West3":
+        message = "Your Region is West 3. Susan Harrison is your representative. Term Expires 2023.";
         break;
       case "West4":
-        message = "Your Region is West 4. Vote for Fred Peterson November 2, 2021";
+        message = "Your Region is West 4. Vote for Fred Peterson November 2, 2021!";
         break;
+      case "West5":
+        message = "Your Region is West 5. Vote for Tim Hester November 2, 2021!";
+        break;     
       case "West6":
-        message = "Your Region is West 6. Vote for Fred Peterson November 2, 2021";
+        message = "Your Region is West 6. Vote for Fred Peterson November 2, 2021!";
         break;
       default:
         message = "Sorry. We were not able to identify your school board candidate.";
