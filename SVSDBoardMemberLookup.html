@@ -4,19 +4,34 @@
   <title>SVSD Board Member Lookup</title>
   </head>
 <body>
-  <script type="text/javascript">  
   
-  </script>  
   
  <form>
-  <label for="properties">Properties</label>
-  <input name="properties" id="properties" list="properties-list">
+  <label for="streetname">Street Name</label>
+  <input name="streetname" id="streetname" list="streets-list">
 </form>
-<datalist id="properties-list">
-  <option>Property 1</option>
-  <option>Property 2</option>
-  <option>Property 3</option>
+<datalist id="streets-list">
+  <option title="East1">Adare Ct</option>
+  <option title="West4">Alleyne Dr</option>
+  <option title="West6">Amber View Ct</option>
+  <option title="West5">Anna Marie Dr</option>
 </datalist>
+  
+   <script type="text/javascript">  
+  function onInput() {
+    var val = document.getElementById("input").value;
+    var opts = document.getElementById('streets-list').childNodes;
+    for (var i = 0; i < opts.length; i++) {
+      if (opts[i].value === val) {
+        // An item was selected from the list!
+        // yourCallbackHere()
+        alert(opts[i].value);
+        break;
+      }
+    }
+  }
+  </script> 
+  
 
 </body>
 </html>
