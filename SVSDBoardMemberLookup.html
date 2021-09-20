@@ -5,7 +5,7 @@
   </head>
 <body>
   
-  <h3>Find SVSD Board Candidate for Your Region</h3>
+  <h3>Find Your SVSD Board Candidate</h3>
  <form>
   <label for="streetname">Street Name</label>
   <input name="streetname" oninput='onInput()' id="streetname" list="streets-list">
@@ -44,7 +44,7 @@ function findRep(district) {
       if (opts[i].value === val) {
         // An item was selected from the list!
         findRep(opts[i].title);
-        alert(opts[i].title);
+        //alert(opts[i].title);
         break;
         }
       }
