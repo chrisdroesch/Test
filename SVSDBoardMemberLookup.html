@@ -20,12 +20,14 @@ input {
 select {
   display: inline-block;
   float: left; }
+ #message { 
+  position: relative;
+  top: 200px; }
  
-  
 </style>
 <body>
   
-  <h3>Find Your SVSD Board Candidate1</h3>
+  <h3>Find Your SVSD Board Candidate</h3>
 <section>
   <form> 
    <label for="township">Where do you live? </label>
@@ -626,10 +628,9 @@ select {
 <option title='WEST 4' >YORKTOWN DR</option>
 <option title='WEST 1' >ZEHNER SCHOOL RD</option>
 </datalist>
-  </section>
- <aside> 
+
   <p id="message"></p>
- </aside> 
+
 <script type="text/javascript">  
 function findRep(district) {
     switch(district) {
@@ -673,8 +674,8 @@ function findRep(district) {
         message = "You live in Region 9. Vote for Jeff Widdowson November 2, 2021!";
         break;
       default:
-        message = "Sorry. We were not able to identify your school board candidate.";
-        //alert (district);
+        message = "";
+       
     }
    document.getElementById("message").innerHTML = message;
 }
