@@ -17,21 +17,39 @@
   <option title="West5">Anna Marie Dr</option>
 </datalist>
   
+  <p id="message"></p>
  
-  
 <script type="text/javascript">  
+function findRep(district) {
+    switch(district) {
+      case "East1":
+        message = "Your Region is East 1. Vote for Leslie Bredl November 2, 2021";
+        break;
+      case "West4":
+        message = "Your Region is West 4. Vote for Fred Peterson November 2, 2021";
+        break;
+      case "West6":
+        message = "Your Region is West 6. Vote for Fred Peterson November 2, 2021";
+        break;
+      default:
+        message = "Sorry. We were not able to identify your school board candidate.";
+    }
+   document.getElementById("message").innerHTML = message;
+}
+  
   function onInput() {
     var val = document.getElementById("streetname").value;
     var opts = document.getElementById('streets-list').childNodes;
     for (var i = 0; i < opts.length; i++) {
       if (opts[i].value === val) {
         // An item was selected from the list!
-        // yourCallbackHere()
+        findRep(opts[i].title);
         alert(opts[i].title);
         break;
         }
       }
    }
+  
 </script> 
 </body>
 </html>
