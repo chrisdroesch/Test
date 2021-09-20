@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
   <title>SVSD Board Member Lookup</title>
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-</head>
+  </head>
 <body>
   <script type="text/javascript">  
-  $(document).ready(function() {
-    $('.js-example-basic-single').select2();
-  });
+  
   </script>  
   
-  <select class="js-example-basic-single" name="state">
-    <option value="AL">Alabama</option>
-    <option value="WY">Wyoming</option>
-  </select>
+ <form>
+  <label for="properties">Properties</label>
+  <input name="properties" id="properties" list="properties-list">
+</form>
+<datalist id="properties-list">
+  <option>Property 1</option>
+  <option>Property 2</option>
+  <option>Property 3</option>
+</datalist>
 
 </body>
 </html>
