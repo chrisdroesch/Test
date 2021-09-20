@@ -5,13 +5,30 @@
   </head>
 <style>
   body { font-family: Futura, Tahoma, Verdana, sans-serif; }
+  #quesiton2 { display:none; }
 </style>
 <body>
   
   <h3>DEMO: Find Your SVSD Board Candidate</h3>
  <form>
-  <label for="streetname">Enter Your Street Name</label>
+   
+   <label for="township">Where do you live? </label>
+   <select name="voting-district" onchange="votingDistrict(this.value)" id="voting-district">
+    <option value="region-9">Callery</option>
+    <option value="cranberry">Cranberry Twp</option>
+    <option value="region-7">Evans City</option>
+    <option value="region-8">Forward Twp</option>
+    <option value="region-9">Harmony Borough</option>
+    <option value="region-9">Jackson Twp</option>
+    <option value="region-8">Lancaster Twp</option>
+    <option value="region-7">Seven Fields</option>
+    <option value="region-6">Zelienople</option>
+  </select>
+   
+  <div id="question2">
+  <label for="streetname">Enter your street name </label>
   <input name="streetname" oninput='onInput()' id="streetname" list="streets-list">
+  </div>
 </form>
 <datalist id="streets-list">
 <option title='WEST 2' >ABERDEEN DR</option>
@@ -626,9 +643,16 @@ function findRep(district) {
         break;
       default:
         message = "Sorry. We were not able to identify your school board candidate.";
+        alert (district);
     }
    document.getElementById("message").innerHTML = message;
 }
+  
+  function votingDistrict(district)
+  {
+    if district == "cranberry" { document.getElementById("question2").display = "block"; }
+    else { findRep(district); }
+  }
   
   function onInput() {
     var val = document.getElementById("streetname").value;
