@@ -26,8 +26,8 @@ select {
 <body>
   
   <h3>DEMO1: Find Your SVSD Board Candidate</h3>
- <form>
-   
+<section>
+  <form> 
    <label for="township">Where do you live? </label>
    <select name="voting-district" onchange="votingDistrict(this.value)" id="voting-district">
     <option>Select Your Area</option>
@@ -47,6 +47,7 @@ select {
   <input name="streetname" oninput='onInput()' id="streetname" list="streets-list">
   </div>
 </form>
+
 <datalist id="streets-list">
 <option title='WEST 2' >ABERDEEN DR</option>
 <option title='WEST 2' >ACER CT</option>
@@ -625,9 +626,10 @@ select {
 <option title='WEST 4' >YORKTOWN DR</option>
 <option title='WEST 1' >ZEHNER SCHOOL RD</option>
 </datalist>
-  
+  </section>
+ <section> 
   <p id="message"></p>
- 
+ </section> 
 <script type="text/javascript">  
 function findRep(district) {
     switch(district) {
