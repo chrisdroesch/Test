@@ -14,15 +14,8 @@
    
   <script>
   var x = navigator.userAgent;
-  document.getElementById("useragent").innerHTML = "User-agent: " + x;
-    //alert("FB: "+ x.search("FB"));
-    //alert("Android: " + x.search(/andoid/i));
-     
-   if (x.search("FB") > 0 && x.search(/android/i) > 0) {
-     document.getElementById("message").innerHTML = "You are using the Facebook Messenger browser on Android"; }
-   else {
-     document.getElementById("message").innerHTML = "You are NOT using the Facebook Messenger browser on Android"; }
-     
+  if (x.search("FB") > 0 && x.search(/android/i) > 0) {
+     document.getElementById("warning").innerHTML = "On mobile devices, this page works best using the Chrome browser."; }
   </script>
   </body>
 </html>
