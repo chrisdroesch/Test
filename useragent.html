@@ -10,7 +10,7 @@
  <body>
    <h3>Your User Agent Information:</h3>
    <p id="useragent"></p>
-   <p id="messsage"></p>
+   <p id="message"></p>
    
   <script>
   var x = navigator.userAgent;
@@ -21,7 +21,6 @@
    if (x.search("FB") > 0 && x.search(/android/i) > 0) {
      document.getElementById("message").innerHTML = "You are using the Facebook Messenger browser on Android"; }
    else {
-     alert("else worked!");
      document.getElementById("message").innerHTML = "You are NOT using the Facebook Messenger browser on Android"; }
      
   </script>
