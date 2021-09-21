@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title> Browser Identification Test</title>
+    <title> Browser Identification Test1</title>
     <style>
       body {
         font-family: Futura, Tahoma, Verdana, sans-serif;
@@ -16,6 +16,8 @@
   var x = navigator.userAgent;
   if (x.search("FB") > 0 && x.search(/android/i) > 0) {
      document.getElementById("warning").innerHTML = "On mobile devices, this page works best using the Chrome browser."; }
+    
+    document.getElementById("reload").innerHTML = "<a href='javascript:location.reload();'>Start Over</a>";
   </script>
   </body>
 </html>
